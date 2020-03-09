@@ -7,4 +7,8 @@ export default createGlobalStyle`
     box-sizing: border-box;
     outline: 0;
   }
+
+  html, body, #root {
+    background: #f7faff;
+  }
 `;

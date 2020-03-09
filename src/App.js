@@ -1,10 +1,11 @@
 import React from 'react';
 import GlobalStyle from './styles/global';
+import Main from './components/Main';
 
 function App() {
   return (
     <>
-      <h1>Word Frequency Counter</h1>
+      <Main />
       <GlobalStyle />
     </>
   );

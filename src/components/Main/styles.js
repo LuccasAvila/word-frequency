@@ -8,6 +8,7 @@ export const Container = styled.div`
   box-shadow: 0 0 32px #ced9eb;
   border-radius: 8px;
   padding: 16px;
+  margin-top: 10vh;
 `;
 
 export const TextArea = styled.textarea`

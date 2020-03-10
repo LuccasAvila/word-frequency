@@ -3,6 +3,7 @@ import { Container, TextArea } from './styles';
 import { TextContext } from '../../context/TextContext';
 
 import Stats from '../Stats';
+import WordFrequency from '../WordFrequency';
 
 const Main = () => {
   const { text, setText } = useContext(TextContext);
@@ -15,6 +16,7 @@ const Main = () => {
         onChange={e => setText(e.target.value)}
         placeholder="Paste or write the text here..."
       />
+      <WordFrequency />
     </Container>
   );
 };

@@ -6,18 +6,30 @@ export const TextContext = createContext({
   setText: () => {},
   countWords: () => {},
   countChars: () => {},
+  wordFrequency: () => {},
 });
 
 const TextProvider = ({ children }) => {
   const [text, setText] = useState('');
+
   const countWords = () => {
     const words = text.split(/[\s,]+/).filter(w => w !== '');
     return words.length;
   };
+
   const countChars = () => text.length;
 
+  const wordFrequency = () => {
+    const words = text.split(/[\s,]+/).filter(w => w !== '');
+    return words.reduce((output, word) => {
+      return { ...output, ...{ [word]: output[word] ? output[word] + 1 : 1 } };
+    }, {});
+  };
+
   return (
-    <TextContext.Provider value={{ text, setText, countWords, countChars }}>
+    <TextContext.Provider
+      value={{ text, setText, countWords, countChars, wordFrequency }}
+    >
       {children}
     </TextContext.Provider>
   );

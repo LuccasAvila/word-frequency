@@ -17,3 +17,21 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li``;
+
+export const Loading = styled.div`
+  height: 128px;
+  background: #aaa;
+  animation: fading 1.5s infinite;
+
+  @keyframes fading {
+    0% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+`;

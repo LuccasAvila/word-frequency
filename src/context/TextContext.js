@@ -24,10 +24,12 @@ const TextProvider = ({ children }) => {
     words = words.reduce((output, word) => {
       return { ...output, ...{ [word]: output[word] ? output[word] + 1 : 1 } };
     }, {});
+
     const sortable = [];
 
     Object.keys(words).forEach(word => {
-      sortable.push([word, words[word]]);
+      const frequency = ((words[word] / countWords()) * 100).toFixed(2);
+      sortable.push([word, words[word], frequency]);
     });
 
     return sortable.sort((a, b) => {

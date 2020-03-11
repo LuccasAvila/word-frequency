@@ -13,16 +13,17 @@ const TextProvider = ({ children }) => {
   const [text, setText] = useState('');
 
   const countWords = () => {
-    const words = text.split(/[\s,]+/).filter(w => w !== '');
+    const words = text.split(/[\s,.!?:]+/).filter(w => w !== '');
     return words.length;
   };
 
   const countChars = () => text.length;
 
   const wordFrequency = () => {
-    let words = text.split(/[\s,]+/).filter(w => w !== '');
+    let words = text.split(/[\s,.!?:]+/).filter(w => w !== '');
     words = words.reduce((output, word) => {
-      return { ...output, ...{ [word]: output[word] ? output[word] + 1 : 1 } };
+      const w = word.trim().toLowerCase();
+      return { ...output, ...{ [w]: output[w] ? output[w] + 1 : 1 } };
     }, {});
 
     const sortable = [];

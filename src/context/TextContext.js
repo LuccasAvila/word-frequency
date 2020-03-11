@@ -25,9 +25,10 @@ const TextProvider = ({ children }) => {
       return { ...output, ...{ [word]: output[word] ? output[word] + 1 : 1 } };
     }, {});
     const sortable = [];
-    for (let word in words) {
+
+    Object.keys(words).forEach(word => {
       sortable.push([word, words[word]]);
-    }
+    });
 
     return sortable.sort((a, b) => {
       return b[1] - a[1];

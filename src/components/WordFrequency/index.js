@@ -23,18 +23,22 @@ const WordFrequency = () => {
   }, [text]);
 
   return (
-    <Container>
-      <Title>Word Frequency:</Title>
-      <List>
-        {loading ? (
-          <Loading />
-        ) : (
-          wordInfo.map(word => (
-            <Item key={word[0]}>{`${word[1]} - ${word[0]} (${word[2]}%)`}</Item>
-          ))
-        )}
-      </List>
-    </Container>
+    wordInfo.length > 0 && (
+      <Container>
+        <Title>Word Frequency:</Title>
+        <List>
+          {loading ? (
+            <Loading />
+          ) : (
+            wordInfo.map(word => (
+              <Item key={word[0]}>
+                {`${word[1]} - ${word[0]} (${word[2]}%)`}
+              </Item>
+            ))
+          )}
+        </List>
+      </Container>
+    )
   );
 };
 

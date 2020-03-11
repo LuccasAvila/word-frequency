@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/word-frequency/static/js/main.c5b2ff57.chunk.js",
+    "main.js.map": "/word-frequency/static/js/main.c5b2ff57.chunk.js.map",
+    "runtime-main.js": "/word-frequency/static/js/runtime-main.00ee3de1.js",
+    "runtime-main.js.map": "/word-frequency/static/js/runtime-main.00ee3de1.js.map",
+    "static/js/2.b1e5d3c7.chunk.js": "/word-frequency/static/js/2.b1e5d3c7.chunk.js",
+    "static/js/2.b1e5d3c7.chunk.js.map": "/word-frequency/static/js/2.b1e5d3c7.chunk.js.map",
+    "index.html": "/word-frequency/index.html",
+    "precache-manifest.15abc18a8dd15214cc51d4672df5cd52.js": "/word-frequency/precache-manifest.15abc18a8dd15214cc51d4672df5cd52.js",
+    "service-worker.js": "/word-frequency/service-worker.js",
+    "static/js/2.b1e5d3c7.chunk.js.LICENSE.txt": "/word-frequency/static/js/2.b1e5d3c7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00ee3de1.js",
+    "static/js/2.b1e5d3c7.chunk.js",
+    "static/js/main.c5b2ff57.chunk.js"
+  ]
+}

@@ -20,10 +20,18 @@ const TextProvider = ({ children }) => {
   const countChars = () => text.length;
 
   const wordFrequency = () => {
-    const words = text.split(/[\s,]+/).filter(w => w !== '');
-    return words.reduce((output, word) => {
+    let words = text.split(/[\s,]+/).filter(w => w !== '');
+    words = words.reduce((output, word) => {
       return { ...output, ...{ [word]: output[word] ? output[word] + 1 : 1 } };
     }, {});
+    const sortable = [];
+    for (let word in words) {
+      sortable.push([word, words[word]]);
+    }
+
+    return sortable.sort((a, b) => {
+      return b[1] - a[1];
+    });
   };
 
   return (

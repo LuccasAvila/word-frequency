@@ -20,7 +20,7 @@ const WordFrequency = () => {
       setWordInfo(wordFrequency);
       setLoading(false);
     }, 1000);
-  }, [text]);
+  }, [text, wordFrequency]);
 
   return (
     wordInfo.length > 0 && (

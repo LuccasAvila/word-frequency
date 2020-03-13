@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container } from './styles';
+import Container from './styles';
 import StatsItem from './StatsItem';
 import { TextContext } from '../../context/TextContext';
 

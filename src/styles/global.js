@@ -10,6 +10,6 @@ export default createGlobalStyle`
   }
 
   html, body, #root {
-    background: #232831;
+    background: ${props => props.theme.colors.primary};
   }
 `;

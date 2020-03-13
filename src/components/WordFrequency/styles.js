@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   margin-top: 16px;
   padding: 16px;
-  background: #232831;
+  background: ${props => props.theme.colors.primary};
 `;
 
 export const Title = styled.p`
   font-size: 1.5rem;
-  color: #fff;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const List = styled.ul`

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
-  background: #232831;
+  background: ${props => props.theme.colors.primary};
   margin-bottom: 16px;
-  color: white;
+  color: ${props => props.theme.colors.text};
 `;

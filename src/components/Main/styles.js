@@ -4,7 +4,7 @@ export const Container = styled.div`
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  background: #393e46;
+  background: ${props => props.theme.colors.secondary};
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 16px;
@@ -17,7 +17,7 @@ export const TextArea = styled.textarea`
   height: 320px;
   font-size: 1.125rem;
   padding: 8px;
-  background: #232831;
+  background: ${props => props.theme.colors.primary};
   border: none;
   color: white;
 `;

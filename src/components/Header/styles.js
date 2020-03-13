@@ -5,16 +5,16 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #393e46;
+  background: ${props => props.theme.colors.secondary};
   padding: 0 24px;
 
   h1 {
     font-size: 1rem;
-    color: white;
+    color: ${props => props.theme.colors.text};
   }
 `;
 
 export const ThemeSwitch = styled.div`
-  color: white;
+  color: ${props => props.theme.colors.text};
   font-size: 1.125rem;
 `;

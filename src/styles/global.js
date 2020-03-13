@@ -10,6 +10,6 @@ export default createGlobalStyle`
   }
 
   html, body, #root {
-    background: #f7faff;
+    background: #232831;
   }
 `;

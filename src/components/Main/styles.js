@@ -19,5 +19,5 @@ export const TextArea = styled.textarea`
   padding: 8px;
   background: ${props => props.theme.colors.primary};
   border: none;
-  color: white;
+  color: ${props => props.theme.colors.text};
 `;

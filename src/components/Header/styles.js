@@ -14,7 +14,9 @@ export const Container = styled.div`
   }
 `;
 
-export const ThemeSwitch = styled.div`
+export const ThemeSwitch = styled.button`
   color: ${props => props.theme.colors.text};
+  background: none;
+  border: none;
   font-size: 1.125rem;
 `;

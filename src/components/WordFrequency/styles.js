@@ -14,7 +14,7 @@ export const Title = styled.p`
 export const List = styled.ul`
   list-style-type: none;
   margin-top: 8px;
-  color: white;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const Item = styled.li``;

@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import PropTypes from 'prop-types';
-import { FaLightbulb } from 'react-icons/fa';
+import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import { Container, ThemeSwitch } from './styles';
 
 const Header = ({ toggleTheme }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <Container>
       <h1>Word Frequency</h1>
       <ThemeSwitch onClick={toggleTheme}>
-        <FaLightbulb />
+        {theme === 'dark' ? <FaLightbulb /> : <FaRegLightbulb />}
       </ThemeSwitch>
     </Container>
   );
